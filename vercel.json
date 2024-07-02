@@ -1,15 +1,15 @@
 {
   "version": 2,
   "functions": {
-    "app.js": {
+    "api/server.js": {
       "memory": 1024,
-      "includeFiles": "posts.json"
+      "includeFiles": "db.json"
     }
   },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "app.js"
+      "destination": "api/server.js"
     }
   ]
 }
