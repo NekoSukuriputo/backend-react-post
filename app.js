@@ -7,6 +7,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.use((req, res, next) => {
   // Attach CORS headers
   // Required when using a detached backend (that runs on a different domain)
@@ -40,4 +42,4 @@ app.post('/posts', async (req, res) => {
   res.status(201).json({ message: 'Stored new post.', post: newPost });
 });
 
-app.listen(8080);
+app.listen(8080, () => console.log("Server ready on port 8080."));
