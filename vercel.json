@@ -1,1 +1,15 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/app.js" }] }
+{
+  "version": 2,
+  "functions": {
+    "app.js": {
+      "memory": 1024,
+      "includeFiles": "posts.json"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "app.js"
+    }
+  ]
+}
