@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const { getStoredPosts, storePosts } = require('./data/posts');
+const { getStoredPosts, storePosts } = require('../data/posts');
 
 const app = express();
 
